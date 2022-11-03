@@ -1,3 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:white;
+}
+
+body.oscuro{
+    background-color: black;
+    height: 100vh;
+}
+
+body.oscuro header{
+    background-color: black;
+}
+
+
+body.oscuro header h1{
+    background-color: black;
+    color: white;
+}
+
+
+body.oscuro .header__nocturno{
+    background-color: black;
+    color: white;
+}
+
+
+body.oscuro .header__nocturno p{
+    background-color: black;
+    color: white;
+}
+
+
 .header{
     width: 100%;
     display: flex;
@@ -15,12 +50,14 @@
 
 .header__nocturno{
     display: flex;
+    align-items: center;
 }
 
 
 .header__nocturno button{
     margin: 10px;
     padding: 3em;
+    background-color: white;
 }
 
 
@@ -30,6 +67,9 @@
     font-size: 2em;
 }
 
+body.oscuro main{
+    background-color: black;
+}
 
 .main{
     width: 100%;
@@ -41,10 +81,20 @@
 .calculadora{
     display:block;
     padding:20px;
-    background-color:#2980b9;
+    background-color:#b50014;
     width:352px;
     height: 486px;
     border-radius: 25px;
+}
+
+
+.calculadora tr{
+    background-color: #b50014;
+}
+
+
+.calculadora td{
+    background-color: #b50014;
 }
 
 
@@ -53,6 +103,14 @@
     width:70px;
     height: 70px;
     font-size: 3em;
+    background-color: white;
+    box-shadow: 2px 5px 16px 1px black;
+}
+
+
+.calculadora td button:hover{
+    background-color: #b5001547;
+    color: white;
 }
 
 
@@ -75,5 +133,6 @@
     line-height: 100px;
     background-color:#fff;
     border-radius: 25px;
+    box-shadow: 2px 5px 16px 1px black;
     overflow-x: scroll;
 }

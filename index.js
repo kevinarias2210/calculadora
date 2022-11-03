@@ -2,6 +2,12 @@ var operandoa;
 var operandob;
 var operacion;
 
+let boton = document.querySelector('.noche');
+boton.addEventListener('click', ()=>{
+    document.body.classList.toggle('oscuro');
+    boton.classList.toggle('active')
+});
+
 function init(){
     //variables
     var resultado = document.getElementById('resultado');
