@@ -1,96 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <title>Calculadora</title>
+<meta charset="UTF-8">
+<title>Calculadora con JavaScript</title>
+<link type="text/css" href="style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="init();">
     <header class="header">
-        <button class="header__boton"></button>
-        <p class="header__p">Cambiar de modo noche</p>
+        <h1>Calculadora</h1>
+        <div class="header__nocturno">
+            <button></button>
+            <p>Cambiar de modo nocturno</p>
+        </div>
     </header>
-
     <main class="main">
         <table class="calculadora">
-            <tr>
-                <td colspan="2">
-                    <span class="resultado"></span>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <button class="borrador">C</button>
-                </td>
-                <td>
-                    <button class="borrador__anterior">CE</button>
-                </td>
-                <td>
-                    <button class="borrador__numero">Delet</button>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <button class="siete">7</button>
-                </td>
-                <td>
-                    <button class="ocho">8</button>
-                </td>
-                <td>
-                    <button class="nueve">9</button>
-                </td>
-                <td>
-                    <button class="multiplicacion">*</button>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <button class="cuatro">4</button>
-                </td>
-                <td>
-                    <button class="cinco">5</button>
-                </td>
-                <td>
-                    <button class="seis">6</button>
-                </td>
-                <td>
-                    <button class="resta">-</button>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <button class="uno">1</button>
-                </td>
-                <td>
-                    <button class="dos">2</button>
-                </td>
-                <td>
-                    <button class="3">3</button>
-                </td>
-                <td>
-                    <button class="suma">+</button>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <button class="cero">0</button>
-                </td>
-                <td>
-                    <button class="ceros">00</button>
-                </td>
-                <td>
-                    <button class="igual">=</button>
-                </td>
-            </tr>
+        <tr>
+          <td colspan="4"><span id="resultado"></span></td>
+        </tr>
+        <tr>
+          <td><button id="siete">7</button></td><td><button id="ocho">8</button></td><td><button id="nueve">9</button></td><td><button id="division">/</button></td>
+        </tr>
+        <tr>
+          <td><button id="cuatro">4</button></td><td><button id="cinco">5</button></td><td><button id="seis">6</button></td><td><button id="multiplicacion">*</button></td>
+        </tr>
+        <tr>
+          <td><button id="uno">1</button></td><td><button id="dos">2</button></td><td><button id="tres">3</button></td><td><button id="resta">-</button></td>
+        </tr>
+        <tr>
+          <td><button id="igual">=</button></td><td><button id="reset">C</button></td><td><button id="cero">0</button></td><td><button id="suma">+</button></td>
+        </tr>
+        <tr>
+          <td colspan="4"><span id="creditos">Hecho para DenisseEstrada.com</span></td>
+        </tr>
         </table>
     </main>
+<script src="index.js"></script>
 </body>
 </html>
