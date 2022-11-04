@@ -1,12 +1,29 @@
+// Primero se crean 3 variables globale, (operandoa, operandob y operacion) sin declararsen.
+
 var operandoa;
 var operandob;
 var operacion;
 
+/*Se crea otra variable que se llama boton, que es igual a que el documento que
+obtenga un selector de clase llamada noche.*/
+
 let boton = document.querySelector('.noche');
+
+/*Se vuelve a llamar la variable boton, para usar un metodo de javascript,
+(addEventListener) y adentro hay una funcion anonima arrow. Entonces lo que
+se está diciendo aquí es que: cuando la variable boton escuche click en el 
+selector indicado arriba haga la funcion que hay adentro*/
 boton.addEventListener('click', ()=>{
     document.body.classList.toggle('oscuro');
     boton.classList.toggle('active')
+    /*Entonces la sentencia de la funcion es: En el html(document) y dentro del body 
+    busque en la lista de clases y como el body no tiene clase, se coloca el toggle 
+    para añadir o sustituir la clase que está dentro de parentecis.*/
 });
+
+/*Entonces con esto ya tiene una funcionalidad para poder cambiar el background en el css
+con la clase "oscuro"*/
+
 
 function init(){
     //variables
