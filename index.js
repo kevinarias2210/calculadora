@@ -7,19 +7,31 @@ var operacion;
 /*Se crea otra variable que se llama boton, que es igual a que el documento que
 obtenga un selector de clase llamada noche.*/
 
-let boton = document.querySelector('.noche');
+/*Se crea una constante llamado imagenButtn, para que obtenga el elemento un id "imageButton"*/
 
+let boton = document.querySelector('.noche');
+const imagenButtn = document.getElementById('imageButton');
 /*Se vuelve a llamar la variable boton, para usar un metodo de javascript,
 (addEventListener) y adentro hay una funcion anonima arrow. Entonces lo que
 se está diciendo aquí es que: cuando la variable boton escuche click en el 
-selector indicado arriba haga la funcion que hay adentro*/
+selector indicado arriba, haga la funcion que hay adentro*/
 boton.addEventListener('click', ()=>{
     document.body.classList.toggle('oscuro');
-    boton.classList.toggle('active')
+    boton.classList.toggle('active');
+    if(document.querySelector('.oscuro')){
+        imagenButtn.setAttribute('src', 'sun.png')
+    }else if(document.querySelector('.noche')){
+        imagenButtn.setAttribute('src', 'moon.png');
+    }
     /*Entonces la sentencia de la funcion es: En el html(document) y dentro del body 
     busque en la lista de clases y como el body no tiene clase, se coloca el toggle 
-    para añadir o sustituir la clase que está dentro de parentecis.*/
+    para añadir o sustituir la clase que está dentro de parentecis.
+    al boton le decimos que agregue en la lista de clase "active", para que cuando haga
+    click nos demos cuanta que está activo.
+    Despúes coloco una condicion if, para que diga... si el documento tenga el selector
+    de clase .oscuro entonces en sus atributos agregueme esta imagen. Posdata casi que no lo pude hacer xD*/
 });
+
 
 /*Entonces con esto ya tiene una funcionalidad para poder cambiar el background en el css
 con la clase "oscuro"*/

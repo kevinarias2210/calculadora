@@ -56,7 +56,7 @@ body.oscuro .header__nocturno p{
 
 .header__nocturno button{
     margin: 10px;
-    padding: 3em;
+    padding: 1em;
     background-color: white;
 }
 
@@ -67,9 +67,11 @@ body.oscuro .header__nocturno p{
     font-size: 2em;
 }
 
+
 body.oscuro main{
     background-color: black;
 }
+
 
 .main{
     width: 100%;
