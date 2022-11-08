@@ -136,3 +136,38 @@ body.oscuro main{
     box-shadow: 2px 5px 16px 1px black;
     overflow-x: scroll;
 }
+
+@media (min-width: 320px){
+    .calculadora{
+        width: 80%;
+        height: 1100px;
+    }
+    .calculadora td button{
+        width: 182px;
+        height: 189px;
+        font-size: 7em;
+    }
+
+    #resultado{
+        width: 100%;
+        height: 10vh;
+    }
+}
+
+@media (min-width: 1024px){
+    .calculadora{
+        width:352px;
+        height: 486px;
+    }
+
+    .calculadora td button{
+        width:70px;
+        height: 70px;
+        font-size: 3em;
+    }
+
+    #resultado{
+        width: 304px;
+        height: 100px;
+    }
+}
