@@ -3,7 +3,6 @@
 var operandoa;
 var operandob;
 var operacion;
-
 /*Se crea otra variable que se llama boton, que es igual a que el documento que
 obtenga un selector de clase llamada noche.*/
 
@@ -29,7 +28,8 @@ boton.addEventListener('click', ()=>{
     al boton le decimos que agregue en la lista de clase "active", para que cuando haga
     click nos demos cuanta que está activo.
     Despúes coloco una condicion if, para que diga... si el documento tenga el selector
-    de clase .oscuro entonces en sus atributos agregueme esta imagen. Posdata casi que no lo pude hacer xD*/
+    de clase .oscuro entonces en sus atributos agregueme esta imagen. Posdata casi que no lo 
+    pude hacer xD*/
 });
 
 
@@ -46,6 +46,7 @@ function init(){
     //variables
     var resultado = document.getElementById('resultado');
     var reset = document.getElementById('reset');
+    var delet = document.getElementById('delete');
     var suma = document.getElementById('suma');
     var resta = document.getElementById('resta');
     var multiplicacion = document.getElementById('multiplicacion');
@@ -107,6 +108,10 @@ function init(){
         resetear();
     }
 
+    delet.onclick = function(){
+        borrarTexto();
+    }
+
     /*Esta parte es donde se definen los operadores y el igual. pasando de una en la sentencia
     de cada funcion es: llamar las variables no declaradas anteriormente, como operandoa que es
     el resultado de lo que se va a imprimir como 0 a 9 con su elemento textContent. Si se llama
@@ -149,6 +154,20 @@ va a traer un string vacio */
 function limpiar(){
     resultado.textContent = "";
 }
+
+/*La funcion de borrartexto da como sentencia a una constante llamada valor que imprime
+cada resultado que de, luego con una condicion if que llama valor, que la constante numero,
+el valor se convierta en un array, que la constante n es igual a que cada valor que tenga
+se quite, luego que en se imprime el resultado, que es igual al valor que entra que es vacio*/
+function borrarTexto(){
+    const valor = resultado.textContent
+    if (valor) {
+        const numero = valor.split('');
+        const n = numero.pop();
+        resultado.textContent = numero.join('');
+    }
+}
+
 
 /*Funcion resetear, su sentencia es dar un contenido vacio en la variable resultado, y 
 en las variables operandoa y b se reasignan en 0 para que vuelva a empezar y la operacion tambien
